@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NodeStatus</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="NodeStatus">
+		<meta name="author" content="Vincent">
+		<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css">
+        <link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Sans SC">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/server-solid.svg">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav role="navigation" class="navbar navbar-default navbar-fixed-top animated slideInUp faster">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">NodeStatus</a>
+                </div>
+            </div>
+		</nav>
+
+        <main class="animated fadeIn faster">
+            <div class="container content">
+                <div id="loading-notice">
+                    <noscript>
+                        <div class="alert alert-danger" style="text-align: center;">
+                            <strong>Enable JavaScript</strong>
+                        </div>
+                    </noscript>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-warning" style="width: 100%;">Loading...</div>
+                    </div>
+                    <div style="text-align: center;">
+                        If this message doesn't disappear make sure that you have Javascript enabled.<br />Otherwise the status server is probably down.
+                    </div>
+                    <p></p>
+                </div>
+                <table class="table table-striped table-condensed table-hover">
+                    <thead>
+                    <tr>
+                        <th id="status4" style="text-align: center;">IPv4</th>
+                        <th id="status6" style="text-align: center;">IPv6</th>
+                        <th id="name">Name</th>
+                        <th id="type">Type</th>
+                        <th id="host">Host</th>
+                        <th id="location">Location</th>
+                        <th id="uptime">Uptime</th>
+                        <th id="load">Load</th>
+                        <th id="network">Network ↓|↑</th>
+                        <th id="cpu">CPU</th>
+                        <th id="ram">RAM</th>
+                        <th id="hdd">HDD</th>
+                        <th id="edit">Edit</th>
+                    </tr>
+                    </thead>
+                    <tbody id="servers">
+                    <!-- Servers here \o/ -->
+                    </tbody>
+                </table>
+                <br />
+                <div id="updated">Updating...</div>
+            </div>
+        </main>
+
+        <!-- Delete server dialog -->
+        <div class="modal fade" id="deleteServerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="alert alert-danger alert-dismissable" id="message"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalLabel">Delete Server</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group" id="form-serverName">
+                                <label for="serverName" class="col-sm-2 control-label">ServerName</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="serverName" 
+                                            placeholder="" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group" id="form-password">
+                                <label for="password" class="col-sm-2 control-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="password"
+                                            placeholder="Please enter...">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="cancel">CANCEL</button>
+                        <button type="button" class="btn btn-danger" id="confirm">CONFIRM</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+        <footer>
+            <p class="copyright"><a href="https://github.com/liucent/NodeStatus" target="#">NodeStatus</a> © 2021 Copyright.</p>
+        </footer>
+
+		<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.loli.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/serverstatus.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>
