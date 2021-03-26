@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: "Noto Sans SC";
     display: flex;
     flex-direction: column;
     padding-top: 70px;
