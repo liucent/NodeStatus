@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
   const collection = await db.collection(process.env.MONGODB_COLLECTION)
 
   // Query for a movie that has the title 'The Room'
-  const query_servers = {  };
+  const query_servers = {};
   const options_servers = {
     // sort matched documents in descending order by rating
     sort: { name: 1 },

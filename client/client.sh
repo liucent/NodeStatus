@@ -2,7 +2,7 @@
 
 UPDATE_URI="https://api.serverless.com/api/update"
 TOKEN="" # api token
-INTERVAL=2 # Update interval should be less than 60s
+INTERVAL=10 # Update interval should be less than 60s
 
 # Node info
 NAME="iKoula" # Server name should be unique

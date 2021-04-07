@@ -153,7 +153,7 @@ function uptime() {
             TableRow.children["host"].innerHTML = result.servers[i].host;
 
             // Location
-            TableRow.children["location"].innerHTML = "<i class=\"flag-icon flag-icon-"+result.servers[i].location+"\"></i>";
+            TableRow.children["location"].innerHTML = "<i class=\"flag-icon flag-icon-" + result.servers[i].location + "\"></i>";
             if (!result.servers[i].online4 && !result.servers[i].online6) {
                 if (server_status[i]) {
                     TableRow.children["uptime"].innerHTML = "–";
@@ -168,9 +168,9 @@ function uptime() {
                     TableRow.children["hdd"].children[0].children[0].className = "progress-bar progress-bar-danger";
                     TableRow.children["hdd"].children[0].children[0].style.width = "100%";
                     TableRow.children["hdd"].children[0].children[0].innerHTML = "<small>Down</small>";
-                    
+
                     //Add delete button
-                    TableRow.children["edit"].innerHTML = '<button id="delete" class="btn btn-danger btn-xs" sn="'+ result.servers[i].name +'"><span class="glyphicon glyphicon-remove" sn="'+ result.servers[i].name +'"></span></button>';
+                    TableRow.children["edit"].innerHTML = '<button id="delete" class="btn btn-danger btn-xs" sn="' + result.servers[i].name + '"><span class="glyphicon glyphicon-remove" sn="' + result.servers[i].name + '"></span></button>';
 
                     if (ExpandRow.hasClass("in")) {
                         ExpandRow.collapse("hide");
@@ -330,7 +330,7 @@ function updateTime() {
 
 uptime();
 updateTime();
-setInterval(uptime, 2000);
+setInterval(uptime, 5000);
 setInterval(updateTime, 500);
 
 

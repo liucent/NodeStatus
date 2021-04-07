@@ -14,7 +14,7 @@ $(document).ready(() => {
         var token = $('#password').val();
 
         // Delete server request
-        $.post(delete_rui, {"name":name, "token":token}, (e) => {
+        $.post(delete_rui, { "name": name, "token": token }, (e) => {
             if (e == 1) {
                 $('#message').html("[" + name + "] deleted successful! Web page will reload!");
                 $('#message').removeClass('alert-danger').addClass('alert-success');
@@ -36,6 +36,5 @@ $(document).ready(() => {
                 }, 3000);
             }
         });
-        
     });
 });
