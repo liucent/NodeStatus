@@ -101,7 +101,7 @@ function uptime() {
                     "<td id=\"hdd\"><div class=\"progress progress-striped active\"><div style=\"width: 100%;\" class=\"progress-bar progress-bar-warning\"><small>Loading...</small></div></div></td>" +
                     "<td id=\"edit\"></td>" +
                     "</tr>" +
-                    "<tr class=\"expandRow " + hack + "\"><td colspan=\"12\"><div class=\"accordian-body collapse\" id=\"rt" + i + "\">" +
+                    "<tr class=\"expandRow " + hack + "\"><td colspan=\"13\"><div class=\"accordian-body collapse\" id=\"rt" + i + "\">" +
                     "<div id=\"expand_bw\">Loading...</div>" +
                     "<div id=\"expand_mem\">Loading...</div>" +
                     "<div id=\"expand_swap\">Loading...</div>" +
