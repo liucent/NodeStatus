@@ -3,7 +3,8 @@ html, body {
 }
 
 body {
-    font-family: "Microsoft YaHei", "Noto Sans SC";
+    /* font-family: "Noto Sans SC"; */
+    font-family: "Microsoft YaHei", Arial;
     display: flex;
     flex-direction: column;
     padding-top: 70px;
