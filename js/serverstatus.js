@@ -257,33 +257,14 @@ function uptime() {
 
                 // Custom
                 var custom = result.servers[i].custom;
+                ExpandRow[0].children["expand_custom"].innerHTML = "";
                 for (var item in custom) {
                     if (custom[item] == "active") {
-                        ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-success\">"+item+"</span>";
+                        ExpandRow[0].children["expand_custom"].innerHTML += "<span class=\"label label-success\">"+item+"</span>";
                     } else {
-                        ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-danger\">"+item+"</span>";
+                        ExpandRow[0].children["expand_custom"].innerHTML += "<span class=\"label label-danger\">"+item+"</span>";
                     }
                 }
-
-                // if (result.servers[i].custom) {
-                //     if (result.servers[i].custom.NGINX == "active") {
-                //         ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-success\">NGINX</span>";
-                //     } else {
-                //         ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-danger\">NGINX</span>";
-                //     }
-                //     if (result.servers[i].custom.MYSQL == "active") {
-                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">MYSQL</span>";
-                //     } else {
-                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">MYSQL</span>";
-                //     }
-                //     if (result.servers[i].custom.PHPFPM == "active") {
-                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">PHPFPM</span>";
-                //     } else {
-                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">PHPFPM</span>";
-                //     }
-                // } else {
-                //     ExpandRow[0].children["expand_custom"].innerHTML = "";
-                // }
             }
 
             if (result.servers[i].updated) {
