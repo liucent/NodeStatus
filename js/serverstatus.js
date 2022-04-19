@@ -1,5 +1,5 @@
 // serverstatus.js
-var find_uri = process.env.BASE_URI + '/api/find';
+var find_uri = 'https://vns.ariesme.com/api/find';
 var error = 0;
 var server_updated = new Array();
 var server_status = new Array();

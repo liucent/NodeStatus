@@ -1,4 +1,4 @@
-var delete_uri = process.env.BASE_URI + '/api/delete';
+var delete_uri = 'https://vns.ariesme.com/api/delete';
 
 $(document).ready(() => {
     $(document).on('click', '#delete', (e) => {
