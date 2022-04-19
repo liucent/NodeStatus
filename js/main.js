@@ -1,4 +1,4 @@
-var delete_rui = 'https://vns.ariesme.com/api/delete';
+var delete_uri = process.env.BASE_URI + '/api/delete';
 
 $(document).ready(() => {
     $(document).on('click', '#delete', (e) => {
@@ -14,7 +14,7 @@ $(document).ready(() => {
         var token = $('#password').val();
 
         // Delete server request
-        $.post(delete_rui, { "name": name, "token": token }, (e) => {
+        $.post(delete_uri, { "name": name, "token": token }, (e) => {
             if (e == 1) {
                 $('#message').html("[" + name + "] deleted successful! Web page will reload!");
                 $('#message').removeClass('alert-danger').addClass('alert-success');
