@@ -260,9 +260,9 @@ function uptime() {
                 ExpandRow[0].children["expand_custom"].innerHTML = "";
                 for (var item in custom) {
                     if (custom[item] == "active") {
-                        ExpandRow[0].children["expand_custom"].innerHTML += "<span class=\"label label-success\">"+item+"</span>";
+                        ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">"+item+"</span>";
                     } else {
-                        ExpandRow[0].children["expand_custom"].innerHTML += "<span class=\"label label-danger\">"+item+"</span>";
+                        ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">"+item+"</span>";
                     }
                 }
             }
