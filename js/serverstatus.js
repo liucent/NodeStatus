@@ -256,30 +256,34 @@ function uptime() {
                 ExpandRow[0].children["expand_hdd"].innerHTML = "Disk: " + bytesToSize(result.servers[i].hdd_used * 1024 * 1024, 2) + " / " + bytesToSize(result.servers[i].hdd_total * 1024 * 1024, 2);
 
                 // Custom
-                if (result.servers[i].custom) {
-                    if (result.servers[i].custom.NGINX == "active") {
-                        ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-success\">NGINX</span>";
+                var custom = result.servers[i].custom;
+                for (var item in custom) {
+                    if (custom[item] == "active") {
+                        ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-success\">"+item+"</span>";
                     } else {
-                        ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-danger\">NGINX</span>";
+                        ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-danger\">"+item+"</span>";
                     }
-                    if (result.servers[i].custom.MYSQL == "active") {
-                        ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">MYSQL</span>";
-                    } else {
-                        ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">MYSQL</span>";
-                    }
-                    if (result.servers[i].custom.PHPFPM == "active") {
-                        ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">PHPFPM</span>";
-                    } else {
-                        ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">PHPFPM</span>";
-                    }
-                    // if (result.servers[i].custom.GUACAMOLE == "active") {
-                    //     ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">GUACAMOLE</span>";
-                    // } else {
-                    //     ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">GUACAMOLE</span>";
-                    // }
-                } else {
-                    ExpandRow[0].children["expand_custom"].innerHTML = "";
                 }
+
+                // if (result.servers[i].custom) {
+                //     if (result.servers[i].custom.NGINX == "active") {
+                //         ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-success\">NGINX</span>";
+                //     } else {
+                //         ExpandRow[0].children["expand_custom"].innerHTML = "<span class=\"label label-danger\">NGINX</span>";
+                //     }
+                //     if (result.servers[i].custom.MYSQL == "active") {
+                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">MYSQL</span>";
+                //     } else {
+                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">MYSQL</span>";
+                //     }
+                //     if (result.servers[i].custom.PHPFPM == "active") {
+                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-success\">PHPFPM</span>";
+                //     } else {
+                //         ExpandRow[0].children["expand_custom"].innerHTML += " <span class=\"label label-danger\">PHPFPM</span>";
+                //     }
+                // } else {
+                //     ExpandRow[0].children["expand_custom"].innerHTML = "";
+                // }
             }
 
             if (result.servers[i].updated) {
