@@ -315,8 +315,8 @@ function updateTime() {
 
 uptime();
 updateTime();
-setInterval(uptime, 5000);
-setInterval(updateTime, 500);
+setInterval(uptime, 1800000);
+setInterval(updateTime, 6000);
 
 
 // styleswitcher.js
