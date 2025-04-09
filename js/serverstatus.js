@@ -120,7 +120,7 @@ function uptime() {
             }
 
             // Server is out of update more than 60s
-            if ((Date.parse(new Date()) / 1000) - result.servers[i].updated > 60) {
+            if ((Date.parse(new Date()) / 1000) - result.servers[i].updated > 7200) {
                 result.servers[i].online4 = false;
                 result.servers[i].online6 = false;
             }
